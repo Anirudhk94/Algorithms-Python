@@ -5,6 +5,10 @@
  *     ListNode next;
  *     ListNode(int x) { val = x; }
  * }
+ * Here, I had a trouble identifying the following corner cases 
+ *   1. addition of 1 + 99999
+ *   2. returning the correct list (not always l1; always retrun the greater length ll)
+ * 
  */
 class AddTwoNumbersLL2 {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {

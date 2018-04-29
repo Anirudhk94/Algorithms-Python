@@ -4,6 +4,7 @@
  *     int val;
  *     ListNode next;
  *     ListNode(int x) { val = x; }
+ *     Thi ssolution has a limitation due to the range of int in java
  * }
  */
 class AddTwoNumbersLL {

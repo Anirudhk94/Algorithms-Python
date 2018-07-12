@@ -78,3 +78,31 @@ class LongestConsecutiveSubsequence {
     }   
     
 }
+
+
+//Solution 2 
+
+class Solution {
+    public int longestConsecutive(int[] nums) {
+        int result = 0;
+        HashSet<Integer> data = new HashSet<Integer>();
+        
+        for(int num : nums)
+            data.add(num);
+        
+        for(int num : nums) {
+            if(!data.contains(num - 1)) {
+                int curr = num;
+                int temp = 0;
+                while(data.contains(curr)) {
+                    curr++;
+                    temp++;
+                }
+                if(temp > result) {
+                    result = temp;
+                }
+            }
+        }
+        return result;   
+    }
+}
